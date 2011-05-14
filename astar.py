@@ -1,5 +1,5 @@
 
-def astar(start, goal, successors, cost_between, evaluate):
+def astar(start, goal, successors, cost_between, evaluate=lambda: 0):
     """
     A* Path Finding Algorithm
 
