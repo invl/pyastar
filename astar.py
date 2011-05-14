@@ -32,16 +32,6 @@ def astar(start, goal, successors, cost_between, evaluate):
         else:
             return reconstruct_path(came_from[v]) + [v]
 
-    def reconstruct_path2(v):
-        """No recursion version"""
-        path = []
-        while True:
-            path.append(v)
-            if v == start:
-                break
-            v = came_from[v]
-        return path[::-1]
-
     while openset:
         node = max(openset, key=lambda k: priority[k])
 
